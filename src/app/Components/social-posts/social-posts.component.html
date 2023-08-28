@@ -1,0 +1,7 @@
+<h1>Welcome to the new and improved Twitter!</h1>
+<<app-single-post *ngFor="let p of listPosts" [post]="p" ></app-single-post> 
+
+<app-post-form (PostCreated)="onSubmit($event)"></app-post-form>
+
+<!-- 
+(PostLiked)="plusOne($event)" -->

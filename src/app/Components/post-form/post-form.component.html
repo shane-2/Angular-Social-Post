@@ -1,0 +1,24 @@
+<button (click)="display = !display">Make a Post</button>
+<div *ngIf="display">
+  <form (ngSubmit)="submitPost()">
+    <input
+      type="text"
+      placeholder="Title"
+      [(ngModel)]="newPost.title"
+      name="title"
+    />
+    <input
+      type="text"
+      placeholder="New Status"
+      [(ngModel)]="newPost.thought"
+      name="thought"
+    />
+    <button type="submit">Post!</button>
+  </form>
+</div>
+
+<!-- <button (click)="display=!display">Edit</button>
+        <form *ngIf="display"> 
+            <input type="text" [(ngModel)]="t.task" name="edit">
+            <button type="submit">Edit</button>
+        </form> -->
